@@ -1,4 +1,4 @@
-# udemy-natours
+# Natours - Exciting tours for adventurous people
 The Natours project for the Advanced CSS course on Udemy by Jonas Schmedtmann 
 
 Full Credit goes to Jonas for the design of this site
