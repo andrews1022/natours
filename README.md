@@ -10,6 +10,7 @@ Building this site I have learned:
   - Transitions
   - Psuedo classes/elements
   - Clip Paths
+  - Creating our own customer grid using Sass variables, nesting, mixins, the attribute selector, & using the calc() function
   
 - Sass Basics
   - Variables
@@ -17,6 +18,7 @@ Building this site I have learned:
   - Mixins
   - Functions
   - Extends
+  - 7-1 File Structure & it's benefits
 
 - NPM / Node.js
   - Using NPM packages to automatically compile Sass & reload the page using live-server
