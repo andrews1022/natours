@@ -1,0 +1,8 @@
+// Clearfix mixin - able to addon to any selector
+@mixin clearfix {
+    &::after{
+        clear: both; 
+        content: "";
+        display: table;
+    }
+}
