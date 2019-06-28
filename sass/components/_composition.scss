@@ -1,0 +1,41 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        border-radius: 2px;
+        box-shadow: 0 1.5rem 4rem rgba($colour-black, 0.4);
+        outline-offset: 2rem;
+        position: absolute;
+        transition: all 250ms;
+        width: 55%;
+        z-index: 10;
+
+        &--p1 {
+            left: 0;
+            top: -2rem;
+        }
+
+        &--p2 {
+            right: 0;
+            top: 2rem;
+        }
+
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+        }
+
+        &:hover {
+            box-shadow: 0 2.5rem 4rem rgba($colour-black, 0.5);
+            outline: 1.5rem solid $colour-primary;
+            transform: scale(1.05) translateY(-.5rem);
+            z-index: 25;
+        }
+    }
+
+    // Downsizing the other
+    // This is equivalent to 'composition:hover composition_photo:not(:hover){}'
+    &:hover &__photo:not(:hover){
+        transform: scale(0.95);
+    }
+}

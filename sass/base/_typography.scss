@@ -15,37 +15,57 @@ body {
     backface-visibility: hidden;
 
     &--main {
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        
         display: block;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-
-
-        animation-name: moveInLeft;
-        animation-duration: 1.5s;
-        animation-timing-function: ease-in-out;
-
-        /* Other CSS common animations properties:
-        
-        animation-delay: 3s; 
-        animation-iteration-count: 3;
-    
-        */
     }
 
     &--sub {
+        animation: moveInRight 1.5s ease-in-out;
+        
         display: block;
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.75rem;
+    }
+}
 
-        /* animation-name: moveInRight;
-        animation-duration: 1.5s;
-        animation-timing-function: ease-in-out; 
+.heading-secondary {
+    // Adding gradient to text:
+    background-image: linear-gradient(to right, $colour-primary-light, $colour-primary-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
     
-            | changed to below |
-        */
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all ease-in-out 250ms;
 
-        animation: moveInRight 1.5s ease-in-out;
+    &:hover {
+        transform: skewY(2deg) skewX(8deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($colour-black, 0.2)
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    line-height: 175%;
+    
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }
