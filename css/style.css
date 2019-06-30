@@ -322,7 +322,7 @@ body {
     transform: translateY(-1.5rem) scale(1.05); }
 
 .story {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -362,6 +362,20 @@ body {
   .story:hover .story__img {
     transform: translateX(-3.5rem) scale(1);
     filter: blur(3px) contrast(115%); }
+
+.bg-video {
+  height: 100%;
+  left: 0;
+  opacity: .15;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -5; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .row {
   margin: 0 auto;
@@ -430,4 +444,5 @@ body {
   margin-top: -10rem; }
 
 .section-stories {
-  padding: 15rem 0; }
+  padding: 15rem 0;
+  position: relative; }
