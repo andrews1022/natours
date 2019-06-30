@@ -51,6 +51,15 @@
         }
     }
 
+    &--green {
+        background-color: $colour-primary;
+        color: $colour-white;
+
+        &::after {
+            background-color: $colour-primary;
+        }
+    }
+
     &--hero {
         animation: moveInBottom 1.5s ease-in-out .75s;
         animation-fill-mode: backwards;
@@ -72,9 +81,9 @@
     &:hover {
         background-color: $colour-primary;
         border-radius: 5rem;
-        box-shadow: 0 1rem 2rem rgba($colour-black, 0.15);
+        box-shadow: 0 1rem 2rem rgba($colour-black, .15);
         color: $colour-white;
-        padding: 1rem 3rem;
+        padding: 0.3rem 3rem;
         transform: translateY(-2px);
     }
 

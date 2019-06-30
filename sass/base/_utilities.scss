@@ -1,7 +1,9 @@
+// CENTER ALIGN TEXT UTILITY CLASS
 .u-center-text {
     text-align: center;
 }
 
+// MARGIN BOTTOM UTILITY CLASSES
 .u-margin-bottom-small {
     margin-bottom: 1.5rem;
 }
@@ -10,4 +12,12 @@
 }
 .u-margin-bottom-big {
     margin-bottom: 8rem;
+}
+
+// MARGIN TOP UTILITY CLASSES
+.u-margin-top-big {
+    margin-top: 8rem;
+}
+.u-margin-top-huge {
+    margin-top: 10rem;
 }
