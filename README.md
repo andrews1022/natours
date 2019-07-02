@@ -20,22 +20,8 @@ Building this site I have learned:
   - Using box-decoration-break to give 1 single HTML element on multiple lines an even amount of padding/background-colour
   - How to wrap text around a circle using shape-outside: circle() and clip-path: circle()
   - Using some basic filters() on hover effects for images to add a nice effect
-  - Using multiple pseudo classes & elements, such as:
-    :hover
-    :link
-    :visted
-    :active
-    :focus
-    :target
-    :not
-    :last-child
-    :checked
-    ::before
-    ::after
-  - Mastering the transform property, using values such as:
-    translate()
-    skew()
-    scale()
+  - Using multiple pseudo classes & elements, such as :hover, :link, :visted, :active, :focus, :target, :not, :last-child, :checked, ::before, & ::after
+  - Mastering the transform property, using values such as: translate(), skew(), scale()
     rotate(),
     and how to fix conflicting uses of the property itself
   - Using cubic-bezier to create custom timing functions
