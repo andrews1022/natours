@@ -21,9 +21,7 @@ Building this site I have learned:
   - How to wrap text around a circle using shape-outside: circle() and clip-path: circle()
   - Using some basic filters() on hover effects for images to add a nice effect
   - Using multiple pseudo classes & elements, such as :hover, :link, :visted, :active, :focus, :target, :not, :last-child, :checked, ::before, & ::after
-  - Mastering the transform property, using values such as: translate(), skew(), scale()
-    rotate(),
-    and how to fix conflicting uses of the property itself
+  - Mastering the transform property, using values such as: translate(), skew(), scale(), rotate(), and how to fix conflicting uses of the property itself
   - Using cubic-bezier to create custom timing functions
   - Creating a pure CSS popup window using :target
   - Adding and styling a background video
