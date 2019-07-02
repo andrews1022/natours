@@ -1,0 +1,103 @@
+.form {
+    
+    // Applying margin to all groups except the last one
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    // Styling the input boxes
+    &__input {
+        background-color: rgba($colour-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 2px;
+        color: inherit;
+        display: block;
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        transition: all .3s ease-in-out;
+        width: 90%;
+        
+        // Styling when the inputs are focused on
+        &:focus {
+            border-bottom: 3px solid $colour-primary;
+            box-shadow: 0 1rem 2rem rgba($colour-black, .1);
+            outline: none;
+
+            &:invalid {
+                border-bottom: 3px solid $colour-secondary-dark;
+            }
+        }
+
+        // Styling the placeholder text
+        &::-webkit-input-placeholder {
+            color: $colour-dark-grey-2;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        transition: all .3s;
+    }
+
+    // The + is the sibing selector
+    // Since input and label are on the same level, we need to select the sibling and not the direct child element
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        transform: translateY(-4rem);
+        visibility: hidden;
+    }
+
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 5rem;
+    }
+
+    // Outer circle of custom radio button
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $colour-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.6rem;
+
+        // Inner circle of custom radio button
+        &::after {
+            content: "";
+            display: block;
+            border-radius: 50%;
+            height: 1.3rem;
+            width: 1.3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $colour-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+}

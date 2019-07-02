@@ -11,10 +11,16 @@ $colour-secondary-dark: #ff7730;
 $colour-tertiary-light: #2998ff;
 $colour-tertiary-dark: #5643fa;
 
-// SHADES
+// LIGHT GREYS
 $colour-light-grey-1: #f7f7f7;
 $colour-light-grey-2: #eee;
+
+// MEDIUM-DARK GREYS
 $colour-dark-grey: #777;
+$colour-dark-grey-2: #999;
+$colour-dark-grey-3: #333;
+
+// WHITE & BLACK
 $colour-white: #fff;
 $colour-black: #000;
 
@@ -25,3 +31,6 @@ $gutter-horizontal: 6rem;
 
 // FONT SIZES
 $default-font-size: 1.6rem;
+
+// BORDER RADIUS
+$default-border-radius: 5px;

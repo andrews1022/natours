@@ -1,6 +1,7 @@
 /* Hero Image Button */
 .btn {
 
+    &,
     &:link,
     &:visited {
         border-radius: 10rem;
@@ -11,10 +12,17 @@
         text-decoration: none;
         text-transform: uppercase;
         transition: all 200ms;
+
+        // Change for the form button
+        border: none;
+        cursor: pointer;
     }
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         box-shadow: 0 1rem 2rem rgba($colour-black, 0.2);
+        outline: none;
         transform: translateY(-3px);
 
         &::after {
@@ -67,6 +75,7 @@
 }
 
 .btn-text {
+
     &:link,
     &:visited {
         border-bottom: 1px solid $colour-primary;
@@ -80,7 +89,7 @@
 
     &:hover {
         background-color: $colour-primary;
-        border-radius: 5rem;
+        border-radius: $default-border-radius;
         box-shadow: 0 1rem 2rem rgba($colour-black, .15);
         color: $colour-white;
         padding: 0.3rem 3rem;

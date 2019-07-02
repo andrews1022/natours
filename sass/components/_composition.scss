@@ -2,7 +2,7 @@
     position: relative;
 
     &__photo {
-        border-radius: 2px;
+        border-radius: $default-border-radius;
         box-shadow: 0 1.5rem 4rem rgba($colour-black, 0.4);
         outline-offset: 2rem;
         position: absolute;

@@ -1,0 +1,153 @@
+.navigation {
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $colour-white;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($colour-black, .1);
+        cursor: pointer;
+        height: 7rem;
+        position: fixed;
+        right: 6rem;
+        text-align: center;
+        top: 6rem;
+        width: 7rem;
+        z-index: 2500;
+    }
+
+    &__background {
+        background-image: radial-gradient($colour-primary-light, $colour-primary-dark);
+        border-radius: 50%;
+        height: 6rem;
+        position: fixed;
+        right: 6.5rem;
+        top: 6.5rem;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        width: 6rem;
+        z-index: 100;
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 750;
+
+        // Hide the navigation by default
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &__list {
+        @include absoluteCenter;
+
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        margin: 1rem;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $colour-white;
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // Starting point for hover effect
+            // Using the same technique for solid-colour gradient used on form image
+            // Set the background-size to a high-number, to essentially have the transparent part cover the text by default
+            // Then on the hover, bring in the white with background-position
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $colour-white 50%);
+            background-size: 225%;
+            transition: all .4s;
+
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-position: 100%;
+            color: $colour-primary;
+            transform: translateY(-.5rem);
+            box-shadow: 0 1.5rem 4rem rgba($colour-black, .2);
+        } 
+
+    }
+
+    // NAVIGATION FUNCTIONALITY
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    // NAVIGATION ICON
+    &__icon {
+        margin-top: 3.5rem;
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $colour-dark-grey-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: ease-in-out .1s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+}
