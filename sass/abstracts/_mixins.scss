@@ -30,6 +30,9 @@ $breakpoint argument choices:
 - big-desktop
 
 1em = 16px
+
+ORDER FOR WRITING MEDIA QUERIES:
+Base + typography > general layout + grid > specific page layout > components
 */
 
 @mixin respond($breakpoint) {

@@ -83,9 +83,25 @@
                 <!-- Stacked Pictures -->
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                             alt="Natours Photo 1" 
+                             sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" 
+                             class="composition__photo composition__photo--p1" 
+                             src="img/nat-1-large.jpg">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                             alt="Natours Photo 2" 
+                             sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" 
+                             class="composition__photo composition__photo--p2" 
+                             src="img/nat-2-large.jpg">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                             alt="Natours Photo 3" 
+                             sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" 
+                             class="composition__photo composition__photo--p3" 
+                             src="img/nat-3-large.jpg">
+
                     </div>
                 </div> <!-- End of Column -->
             </div> <!-- End of Row -->
@@ -351,7 +367,15 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full Natours Logo" class="footer__logo">
+
+            <picture class="footer__logo" >
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                     alt="Full Logo"
+                     src="img/logo-green-2x.png">
+            </picture>
+
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -382,7 +406,8 @@
     </footer>
 
     <!-- Pure CSS Popup -->
-    <div class="popup" id="popup"> <!-- Used for black background -->
+    <div class="popup" id="popup">
+        <!-- Used for black background -->
         <div class="popup__content">
             <div class="popup__left">
                 <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
@@ -391,83 +416,19 @@
             <div class="popup__right">
                 <a href="#section-tours" class="popup__close">&times;</a>
                 <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                <p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet animi quod sed sapiente eligendi ab ipsam voluptatibus hic neque quaerat facilis voluptatem praesentium, eum harum maiores cum consectetur sint. Iure rerum porro perferendis exercitationem atque quo vitae ipsum voluptas omnis soluta deleniti non voluptatibus sunt, est nostrum voluptate nemo? Incidunt, animi? Impedit fugit nostrum facilis quia delectus? Ut perspiciatis, explicabo hic animi vel ab? Odit quos quam quaerat quo eos vitae, id debitis!</p>
-                <a href="#" class="btn btn--green">Book now</a> 
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3>
+                <p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet animi quod
+                    sed sapiente eligendi ab ipsam voluptatibus hic neque quaerat facilis voluptatem praesentium, eum
+                    harum maiores cum consectetur sint. Iure rerum porro perferendis exercitationem atque quo vitae
+                    ipsum voluptas omnis soluta deleniti non voluptatibus sunt, est nostrum voluptate nemo? Incidunt,
+                    animi? Impedit fugit nostrum facilis quia delectus? Ut perspiciatis, explicabo hic animi vel ab?
+                    Odit quos quam quaerat quo eos vitae, id debitis!</p>
+                <a href="#" class="btn btn--green">Book now</a>
             </div>
         </div>
     </div>
 
-    <!-- Testing our Grid -->
-    <!-- <section class="grid-test">
-
-        <div class="row">
-            <div class="col-1-of-2">
-                <p>Col 1 of 2</p>
-            </div>
-            <div class="col-1-of-2">
-                <p>Col 1 of 2</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                <p>Col 1 of 3</p>
-            </div>
-            <div class="col-1-of-3">
-                <p>Col 1 of 3</p>
-            </div>
-            <div class="col-1-of-3">
-                <p>Col 1 of 3</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                <p>Col 1 of 3</p>
-            </div>
-            <div class="col-2-of-3">
-                <p>Col 2 of 3</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-            <div class="col-2-of-4">
-                <p>Col 2 of 4</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                <p>Col 1 of 4</p>
-            </div>
-            <div class="col-3-of-4">
-                <p>Col 3 of 4</p>
-            </div>
-        </div>
-
-    </section> -->
 </body>
 
 </html>

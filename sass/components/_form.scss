@@ -54,8 +54,13 @@
     }
 
     &__radio-group {
-        width: 49%;
         display: inline-block;
+        width: 49%;
+        
+        @include respond(tab-port) {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
     }
 
     &__radio-input {
@@ -65,35 +70,35 @@
     &__radio-label {
         font-size: $default-font-size;
         cursor: pointer;
-        position: relative;
         padding-left: 5rem;
+        position: relative;
     }
 
     // Outer circle of custom radio button
     &__radio-button {
-        height: 3rem;
-        width: 3rem;
         border: 5px solid $colour-primary;
         border-radius: 50%;
         display: inline-block;
-        position: absolute;
+        height: 3rem;
         left: 0;
+        position: absolute;
         top: -.6rem;
+        width: 3rem;
 
         // Inner circle of custom radio button
         &::after {
+            background-color: $colour-primary;
+            border-radius: 50%;
             content: "";
             display: block;
-            border-radius: 50%;
             height: 1.3rem;
-            width: 1.3rem;
+            left: 50%;
+            opacity: 0;
             position: absolute;
             top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $colour-primary;
-            opacity: 0;
             transition: opacity .2s;
+            width: 1.3rem; 
         }
     }
 
