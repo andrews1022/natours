@@ -33,6 +33,10 @@ body {
     @include respond(tab-port) {
         padding: 0;
     }
+}
 
+::selection {
+    background-color: $colour-primary;
+    color: $colour-white;
 }
 
