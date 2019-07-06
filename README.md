@@ -25,6 +25,8 @@ Building this site I have learned:
   - Using cubic-bezier to create custom timing functions
   - Creating a pure CSS popup window using :target
   - Adding and styling a background video
+  - Understanding the differences between and knowing when to use min-/max-width for media queries
+  - Making images responsive through HTML (srcset, media, & sizes attributes) & CSS (min-resolution & min-width to display the best possible version of an image to not hinder performance), and concepts such as Art Direction, Density Switching, & Resolution Switching
   
   
 - Using Sass
@@ -36,6 +38,7 @@ Building this site I have learned:
   - 7-1 File Structure & it's benefits
   - Creating our own customer grid using Sass variables, nesting, mixins, the attribute selector, floats, & using the calc() function
   - Using mixins to create a "Media Query Manager", and using @if and passing arguments based on the screen size
+  - Using @supports to possibly provide functionality to browsers of the latest CSS properties
 
 - NPM / Node.js
   - Using NPM packages to automatically compile Sass & reload the page using live-server
