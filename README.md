@@ -13,6 +13,7 @@ Building this project, I have learned:
   - Clip Paths
   - Adding a gradient to text/font-icons
   - Using utility classes
+  - Using the BEM methodology for class name/structure
   - The offline-offset property
   - Giving sections a skewed look
   - Using the perspective, and backface-visibility properties to aid in achieving a flipped card effect
